@@ -11,15 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509190624) do
+ActiveRecord::Schema.define(version: 20160511132657) do
 
   create_table "companies", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.integer  "kind",            limit: 4
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "seetings", force: :cascade do |t|
+    t.integer  "company_id",      limit: 4
+    t.string   "person_kind",     limit: 255
+    t.string   "person_name",     limit: 255
+    t.string   "address",         limit: 255
+    t.string   "zipcode",         limit: 255
+    t.string   "neighborhood",    limit: 255
+    t.string   "state",           limit: 255
+    t.string   "city",            limit: 255
+    t.string   "cpf_cnpj",        limit: 255
     t.string   "registry_number", limit: 255
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
+
+  add_index "seetings", ["company_id"], name: "index_seetings_on_company_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -35,9 +50,12 @@ ActiveRecord::Schema.define(version: 20160509190624) do
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
     t.integer  "company_id",             limit: 4
+    t.string   "name",                   limit: 255
+    t.datetime "expired_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["expired_at"], name: "index_users_on_expired_at", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

@@ -1,0 +1,34 @@
+pt-BR:
+  activerecord:
+    models:
+      company:
+        one: Empresa
+        other: Empresas
+      seeting:
+        one: Configuração
+        other: Configurações
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      company:
+        name: Nome
+      seeting:
+        person_kinds:
+          pf: Pessoa Física
+          pj: Pessoa Jurídica
+        company: Empresa
+        person_kind: Tipo Pessoa
+        person_name: Nome Empresa/Pessoa
+        address: Endereço
+        zipcode: CEP
+        neighborhood: Bairro
+        state: Estado
+        city: Cidade
+        cpf_cnpj: CPF/CNPJ
+        registry_number: RG
+      user:
+        name: Nome
+        email: E-mail
+        password: Senha
+        confirm_password: Confirmação de senha

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :home, only: :index
+    resources :users, except: [:show]
+    resources :seetings, only: [:edit, :update, :create, :new]
     devise_for :users
   end
 end

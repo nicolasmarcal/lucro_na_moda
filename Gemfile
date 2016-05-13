@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 gem 'rails', '4.2.6'
 gem 'mysql2'
 gem 'haml-rails'
@@ -13,6 +15,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
+
+gem 'inherited_resources'
+gem 'simple_form'
+
+gem 'devise_security_extension'
 
 group :test do
   gem 'shoulda-matchers'
@@ -30,4 +37,5 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem "better_errors"
 end

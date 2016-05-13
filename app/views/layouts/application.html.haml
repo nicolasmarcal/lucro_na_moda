@@ -1,10 +1,14 @@
-%html
+!!! 5
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => I18n.locale, :lang => I18n.locale}
   %head
     %title
       Lucro na Moda ::
       = @current_company.name
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    = render "layouts/admin/navbar"
+    .container-fluid
+      = render partial: "layouts/admin/flash_messages", flash: flash
+      = yield
