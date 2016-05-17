@@ -1,7 +1,11 @@
-.col-md-4
-  = simple_form_for([:admin, @user]) do |f|
-    = f.input :name
-    = f.input :email
-    = f.input :password
-    = f.input :password_confirmation
-    = f.button :submit, class: "btn btn-success"
+.row
+  .col-md-4
+    %h1 Configurações
+.row
+  .col-md-4
+    = simple_form_for([:admin, @user]) do |f|
+      = f.input :name
+      = f.input :email
+      = f.input :password
+      = f.input :password_confirmation
+      = f.button :submit, class: "btn btn-success"

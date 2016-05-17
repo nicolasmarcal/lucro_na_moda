@@ -1,13 +1,17 @@
-.col-md-4
-  = simple_form_for([:admin, @seeting]) do |f|
-    = f.input :person_kind, collection: Seeting::kinds
-    = f.input :person_name
-    = f.input :zipcode
-    = f.input :address
-    = f.input :neighborhood
-    = f.input :state
-    = f.input :city
-    = f.input :cpf_cnpj
-    = f.input :registry_number
+.row
+  .col-md-4
+    %h1 Configurações
+.row
+  .col-md-4
+    = simple_form_for([:admin, @seeting]) do |f|
+      = f.input :person_kind, collection: Seeting::kinds
+      = f.input :person_name
+      = f.input :zipcode
+      = f.input :address
+      = f.input :neighborhood
+      = f.input :state
+      = f.input :city
+      = f.input :cpf_cnpj
+      = f.input :registry_number
 
-    = f.button :submit, class: "btn btn-success"
+      = f.button :submit, class: "btn btn-success"

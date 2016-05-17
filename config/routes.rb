@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :home, only: :index
     resources :users, except: [:show]
     resources :seetings, only: [:edit, :update, :create, :new]
+    resources :consulting_kinds, only: [:edit, :update, :create, :new]
     devise_for :users
   end
 end

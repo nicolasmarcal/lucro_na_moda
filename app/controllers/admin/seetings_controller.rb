@@ -14,7 +14,7 @@ class Admin::SeetingsController < InheritedResources::Base
     @seeting = Seeting.new(permitted_params.merge(company_id: @current_company.id))
 
     if @seeting.save
-      redirect_to edit_adimin_seeting(@seeting)
+      redirect_to edit_admin_seeting_path(@seeting)
     else
       render :edit
     end
