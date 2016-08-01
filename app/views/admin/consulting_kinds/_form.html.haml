@@ -1,0 +1,9 @@
+.row
+  .col-md-4
+    %h1 Tipo de Consultoria
+.row
+  .col-md-4
+    = simple_form_for([:admin, @consulting_kind]) do |f|
+      = f.input :name
+
+      = f.button :submit, class: "btn btn-success"

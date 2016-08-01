@@ -1,4 +1,4 @@
-class Admin::ConsultingKindsController < ApplicationController
+class Admin::ConsultingKindsController < InheritedResources::Base
 
 
   private
