@@ -15,3 +15,14 @@
       = f.input :registry_number
 
       = f.button :submit, class: "btn btn-success"
+
+:javascript
+  $("#seeting_zipcode").blur(function(){
+    $.get(" /admin/zipcode/find?zip_code=" + $("#seeting_zipcode").val(), function(data){
+      $("#seeting_state").val(data["state"]);
+      $("#seeting_street").val(data["address"]);
+      $("#seeting_city").val(data["city"]);
+      $("#seeting_neighborhood").val(data["neighborhood"]);
+      $("#seeting_address").val(data["address"]);
+    });
+  });

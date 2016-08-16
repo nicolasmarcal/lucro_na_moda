@@ -1,0 +1,21 @@
+.row
+  .col-md-4
+    %h1 Meus Passos de Consultoria
+.row
+  .col-md-4
+    %table{ class: "table table-striped" }
+      %thead
+        %tr
+          %td Passo
+          %td Ações
+      %tbody
+        - @seeting.consulting_steps.each do |consulting_step|
+          %tr
+            %td= consulting_step.name
+            %td
+              = link_to edit_admin_seeting_consulting_step_path(@seeting, consulting_step), role: "button", class: "btn btn-primary" do
+                %i.glyphicon.glyphicon-pencil
+                Editar
+    = link_to new_admin_seeting_consulting_step_path(@seeting), role: "button", class: "btn btn-primary" do
+      %i.glyphicon.glyphicon-plus
+      Adicionar

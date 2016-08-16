@@ -8,6 +8,7 @@ class Seeting < ActiveRecord::Base
 
   belongs_to :company
   has_many :consulting_kinds
+  has_many :consulting_steps
 
   private
 

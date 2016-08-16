@@ -21,6 +21,8 @@ gem 'simple_form'
 
 gem 'devise_security_extension'
 
+gem 'correios-cep'
+
 group :test do
   gem 'shoulda-matchers'
 end

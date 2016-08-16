@@ -60,6 +60,9 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
+    correios-cep (0.6.1)
+      log-me (~> 0.0.10)
+      ox (~> 2.2.2)
     cpf_cnpj (0.2.1)
     daemons (1.2.3)
     database_cleaner (1.5.3)
@@ -115,6 +118,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    log-me (0.0.10)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -138,6 +142,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
+    ox (2.2.4)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -252,6 +257,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
+  correios-cep
   cpf_cnpj
   database_cleaner
   devise
@@ -279,4 +285,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.3
+   1.12.5
